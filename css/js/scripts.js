@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log('SquatForce website loaded');
 
@@ -11,46 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-
-    // Funkcionalnost slideshowa
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    }
-
-    // Inicijalizacija slideshowa
-    showSlide(currentSlide);
-    setInterval(nextSlide, 5000); // Automatski mijenja slajdove svakih 5 sekundi
-
-    // Dodavanje gumba za kontrolu slideshowa
-    const slideshow = document.getElementById('slideshow');
-    const prevButton = document.createElement('button');
-    prevButton.textContent = '←';
-    prevButton.classList.add('slide-control', 'prev');
-    prevButton.addEventListener('click', prevSlide);
-
-    const nextButton = document.createElement('button');
-    nextButton.textContent = '→';
-    nextButton.classList.add('slide-control', 'next');
-    nextButton.addEventListener('click', nextSlide);
-
-    slideshow.appendChild(prevButton);
-    slideshow.appendChild(nextButton);
 
     // Funkcionalnost kontakt obrasca
     const contactForm = document.getElementById('contact-form');
