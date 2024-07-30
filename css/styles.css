@@ -1,3 +1,4 @@
+/* Osnovni stilovi */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -56,6 +57,7 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    text-align: center; /* Dodano za centriranje teksta */
 }
 
 section {
@@ -63,10 +65,10 @@ section {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     margin-bottom: 20px;
-    text-align: center; /* Center all text within sections */
 }
 
 h2 {
+    text-align: center;
     margin-bottom: 30px;
 }
 
@@ -131,6 +133,7 @@ footer .social-media a {
 }
 
 #cta {
+    text-align: center;
     padding: 40px 20px;
 }
 
@@ -207,20 +210,8 @@ footer .social-media a {
     background-color: #3366cc;
 }
 
+/* Mobilni prikaz */
 @media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero-text p {
-        font-size: 1.2em;
-    }
-}
-@media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -232,6 +223,7 @@ footer .social-media a {
 
     nav ul {
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
     }
 
@@ -262,8 +254,8 @@ footer .social-media a {
     }
 
     #contact-form {
-        width: 90%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 10px;
     }
 }
 
@@ -294,3 +286,4 @@ footer .social-media a {
         font-size: 1em;
     }
 }
+
